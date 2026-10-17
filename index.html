@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job Application Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="bg-slate-100 text-slate-700 min-h-screen">
+  <main class="max-w-5xl mx-auto px-4 pt-6 pb-12">
+    <h1 class="text-2xl sm:text-3xl font-bold text-[#002c5c] mb-5">Job Application Tracker</h1>
+
+    <section class="grid grid-cols-3 gap-2 sm:gap-3 mb-8" aria-label="Dashboard">
+      <div class="card bg-base-100 border border-base-300 text-center py-3 sm:py-4">
+        <p class="text-xs sm:text-sm text-slate-500">Total</p>
+        <p id="totalCount" class="text-3xl sm:text-4xl font-bold text-[#002c5c]">1</p>
+      </div>
+      <div class="card bg-base-100 border border-base-300 text-center py-3 sm:py-4">
+        <p class="text-xs sm:text-sm text-slate-500">Interview</p>
+        <p id="interviewCount" class="text-3xl sm:text-4xl font-bold text-[#002c5c]">0</p>
+      </div>
+      <div class="card bg-base-100 border border-base-300 text-center py-3 sm:py-4">
+        <p class="text-xs sm:text-sm text-slate-500">Rejected</p>
+        <p id="rejectedCount" class="text-3xl sm:text-4xl font-bold text-[#002c5c]">0</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="jobsTitle">
+      <div class="flex justify-between items-baseline gap-4 mb-3">
+        <h2 id="jobsTitle" class="text-lg font-bold text-[#002c5c]">Available Jobs</h2>
+        <p id="jobsCount" class="text-sm text-slate-500" aria-live="polite"></p>
+      </div>
+      <div role="tablist" class="tabs tabs-boxed bg-base-100 w-fit mb-4">
+        <button onclick="onclickk('joblist')" class="tab btn-primary soft text-black" id="all">All</button>
+        <button onclick="" class="tab tab btn-primary soft text-black" id="interview">Interview</button>
+        <button class="tab tab btn-primary soft text-black" id="rejected">Rejected</button>
+      </div>
+
+    </section>
+    <section id="joblist" class=" ">
+      <section id="list1" class="mb-2 relative">
+        <div id="jobList-container" class="card bg-base-100 border border-base-300  font-bold space-y-6 px-2  ">
+          <div id="joblist-contan">
+            <h2 class=" text-xl card bg-base-100  border-base-300 px-3  font-bold">Mobile First Corp</h2>
+            <button onclick="delect('list1')"
+              class=" btn btn-outline btn-primary absolute mt-[140px] ml-[190px]">delect</button>
+            <p class="py-2">reacr nativ developer</p>
+
+            <p class="py-2 ">remor. fulltime .300$-600$</p>
+            <div>No aplied</div>
+            <p class="py-2">bild cross-platfrom mobile application</p>
+            <div class=" flex  gap-3">
+              <button id="int" class="btn btn-outline btn-primary p-[05px] ">INTERVIEW</button>
+              <button    id="re"  class="btn btn-outline btn-secondary p-[05px]">REJECTED</button>
+            </div>
+
+          </div>
+
+      </section>
+      <section id="list2" class="mb-2 relative">
+        <div id="jobList-container" class="card bg-base-100 border border-base-300  font-bold space-y-6 px-2  ">
+          <div id="joblist-contan">
+            <h2 class=" text-xl card bg-base-100  border-base-300 px-3  font-bold">Mobile First Corp</h2>
+            <button onclick="delect('list2')"
+              class=" btn btn-outline btn-primary absolute mt-[140px] ml-[190px]">delect</button>
+            <p class="py-2">reacr nativ developer --1</p>
+
+            <p class="py-2 ">remor. fulltime .300$-600$</p>
+            <div>No aplied</div>
+            <p class="py-2">bild cross-platfrom mobile application</p>
+            <div class=" flex  gap-3">
+              <button class="btn btn-outline btn-primary p-[05px] ">INTERVIEW</button>
+              <button class="btn btn-outline btn-secondary p-[05px]">REJECTED</button>
+            </div>
+
+          </div>
+
+      </section>
+      <section id="list3" class="mb-2 relative">
+        <div id="jobList-container" class="card bg-base-100 border border-base-300  font-bold space-y-6 px-2  ">
+          <div id="joblist-contan">
+            <h2 class=" text-xl card bg-base-100  border-base-300 px-3  font-bold">Mobile First Corp</h2>
+            <button onclick="delect('list3')"
+              class=" btn btn-outline btn-primary absolute mt-[140px] ml-[190px]">delect</button>
+            <p class="py-2">reacr nativ developer--2</p>
+
+            <p class="py-2 ">remor. fulltime .300$-600$</p>
+            <div>No aplied</div>
+            <p class="py-2">bild cross-platfrom mobile application</p>
+            <div class=" flex  gap-3">
+              <button class="btn btn-outline btn-primary p-[05px] ">INTERVIEW</button>
+              <button class="btn btn-outline btn-secondary p-[05px]">REJECTED</button>
+            </div>
+
+          </div>
+
+      </section>
+      <section id="list4" class="mb-2 relative">
+        <div id="jobList-container" class="card bg-base-100 border border-base-300  font-bold space-y-6 px-2  ">
+          <div id="joblist-contan">
+            <h2 class=" text-xl card bg-base-100  border-base-300 px-3  font-bold">Mobile First Corp</h2>
+            <button onclick="delect('list4')"
+              class=" btn btn-outline btn-primary absolute mt-[140px] ml-[190px]">delect</button>
+            <p class="py-2">reacr nativ developer--4</p>
+
+            <p class="py-2 ">remor. fulltime .300$-600$</p>
+            <div>No aplied</div>
+            <p class="py-2">bild cross-platfrom mobile application</p>
+            <div class=" flex  gap-3">
+              <button class="btn btn-outline btn-primary p-[05px] ">INTERVIEW</button>
+              <button class="btn btn-outline btn-secondary p-[05px]">REJECTED</button>
+            </div>
+
+          </div>
+
+      </section>
+
+    </section>
+
+    <section id="no-job" class="hidden" >
+      <div class="grid bg-base-100 border border-base-300  font-bold items-center justify-center p-[10px] rounded-2xl text-center">
+        <div class="  ">
+          <img class="w-[50px] ml-[90px]" src="/imsges/jobs.png" alt="">
+        </div>
+        <div>
+          <h2>NO job available</h2>
+          <p>check back soon for new job</p>
+        </div>
+      </div>
+    </section>
+    <section id="no-job1" class="hidden" >
+      <div class="grid bg-base-100 border border-base-300  font-bold items-center justify-center p-[10px] rounded-2xl text-center">
+        <div class="  ">
+          <img class="w-[50px] ml-[90px]" src="/imsges/jobs.png" alt="">
+        </div>
+        <div>
+          <h2>NO job available</h2>
+          <p>check back soon for new job</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script src="/mashin.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
